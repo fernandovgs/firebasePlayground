@@ -1,19 +1,50 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import {
+  TouchableOpacity,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
 import PropTypes from 'prop-types';
 
-const ClothTemplate = ({ testLabel }) => (
-  <SafeAreaView>
-    <Text>{testLabel}</Text>
+import clothTemplateStyle from '../../styles/clothTemplateStyle';
+
+const ClothTemplate = ({ title }) => (
+  <SafeAreaView style={clothTemplateStyle.mainContainer}>
+    <ScrollView
+      contentContainerStyle={clothTemplateStyle.scrollViewContainer}
+      scrollEnabled
+      showsVerticalScrollIndicator
+    >
+      {/* Title */}
+      <View style={clothTemplateStyle.titleContainer}>
+        <Text style={clothTemplateStyle.titleLabel}>{title}</Text>
+      </View>
+
+      {/* Product Info */}
+      <View style={clothTemplateStyle.productInfoContainer}>
+        <Text>FOTO</Text>
+      </View>
+
+      {/* Buy button */}
+      <TouchableOpacity style={clothTemplateStyle.buyButtonTouchable}>
+        <View style={clothTemplateStyle.buyButtonContainer}>
+          <Text style={clothTemplateStyle.buyButtonTitle}>Comprar</Text>
+        </View>
+      </TouchableOpacity>
+
+    </ScrollView>
   </SafeAreaView>
+
 );
 
 ClothTemplate.propTypes = {
-  testLabel: PropTypes.string,
+  title: PropTypes.string,
 };
 
 ClothTemplate.defaultProps = {
-  testLabel: '',
+  title: '',
 };
 
 export default ClothTemplate;

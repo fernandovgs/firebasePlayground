@@ -2,8 +2,8 @@ import React from 'react';
 
 import ClothTemplate from '../components/templates/ClothTemplate';
 
-const ShirtScreen = () => (
-  <ClothTemplate testLabel="teste 3" />
+const TShirtScreen = () => (
+  <ClothTemplate title="Camiseta" />
 );
 
-export default ShirtScreen;
+export default TShirtScreen;

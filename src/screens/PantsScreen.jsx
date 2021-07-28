@@ -3,7 +3,7 @@ import React from 'react';
 import ClothTemplate from '../components/templates/ClothTemplate';
 
 const PantsScreen = () => (
-  <ClothTemplate testLabel="teste 2" />
+  <ClothTemplate title="Calça" />
 );
 
 export default PantsScreen;
