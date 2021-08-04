@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import analytics from '@react-native-firebase/analytics';
 
-import ClothNavigation from './ClothNavigation';
+// import ClothNavigation from './ClothNavigation';
+import MainNavigation from './MainNavigation';
 
 const Routes = () => {
   const routeNameRef = useRef();
@@ -28,7 +29,8 @@ const Routes = () => {
         routeNameRef.current = currentRouteName;
       }}
     >
-      <ClothNavigation />
+      {/* <ClothNavigation /> */}
+      <MainNavigation />
     </NavigationContainer>
 
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  TouchableOpacity,
   SafeAreaView,
   ScrollView,
   Text,
@@ -9,6 +8,7 @@ import {
 import PropTypes from 'prop-types';
 
 import clothTemplateStyle from '../../styles/clothTemplateStyle';
+import CustomButton from '../CustomButton';
 
 const ClothTemplate = ({ title, onPress }) => (
   <SafeAreaView style={clothTemplateStyle.mainContainer}>
@@ -28,11 +28,7 @@ const ClothTemplate = ({ title, onPress }) => (
       </View>
 
       {/* Buy button */}
-      <TouchableOpacity style={clothTemplateStyle.buyButtonTouchable} onPress={onPress}>
-        <View style={clothTemplateStyle.buyButtonContainer}>
-          <Text style={clothTemplateStyle.buyButtonTitle}>Comprar</Text>
-        </View>
-      </TouchableOpacity>
+      <CustomButton onPress={onPress} label="Comprar" />
 
     </ScrollView>
   </SafeAreaView>
