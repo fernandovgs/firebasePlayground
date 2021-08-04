@@ -30,9 +30,9 @@ const ClothNavigation = () => (
       />
     )}
   >
-    <Tab.Screen name="Jacket" component={JacketScreen} />
-    <Tab.Screen name="Pants" component={PantsScreen} />
-    <Tab.Screen name="TShirt" component={TShirtScreen} />
+    <Tab.Screen name="Jaqueta" component={JacketScreen} />
+    <Tab.Screen name="Calça" component={PantsScreen} />
+    <Tab.Screen name="Camisa" component={TShirtScreen} />
   </Tab.Navigator>
 );
 

@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 import clothTemplateStyle from '../../styles/clothTemplateStyle';
 
-const ClothTemplate = ({ title }) => (
+const ClothTemplate = ({ title, onPress }) => (
   <SafeAreaView style={clothTemplateStyle.mainContainer}>
     <ScrollView
       contentContainerStyle={clothTemplateStyle.scrollViewContainer}
@@ -28,7 +28,7 @@ const ClothTemplate = ({ title }) => (
       </View>
 
       {/* Buy button */}
-      <TouchableOpacity style={clothTemplateStyle.buyButtonTouchable}>
+      <TouchableOpacity style={clothTemplateStyle.buyButtonTouchable} onPress={onPress}>
         <View style={clothTemplateStyle.buyButtonContainer}>
           <Text style={clothTemplateStyle.buyButtonTitle}>Comprar</Text>
         </View>
@@ -36,15 +36,16 @@ const ClothTemplate = ({ title }) => (
 
     </ScrollView>
   </SafeAreaView>
-
 );
 
 ClothTemplate.propTypes = {
   title: PropTypes.string,
+  onPress: PropTypes.func,
 };
 
 ClothTemplate.defaultProps = {
   title: '',
+  onPress: null,
 };
 
 export default ClothTemplate;
