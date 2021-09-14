@@ -3,11 +3,12 @@ import React from 'react';
 import ClothTemplate from '../components/templates/ClothTemplate';
 
 import clothesAnalytics from '../analytics/clothesAnalytics';
-import t from '../i18n';
+import i18n from '../i18n/i18n';
 
+// Using a direct object
 const PantsScreen = () => (
   <ClothTemplate
-    title={t('PANTS')}
+    title={i18n.PANTS}
     onPress={async () => {
       await clothesAnalytics({
         eventName: 'pants',
