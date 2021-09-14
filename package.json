@@ -9,6 +9,8 @@
     "test": "jest",
     "lint": "npx eslint --ext .jsx --ext .js . --fix",
     "android:clean": "cd android/ && ./gradlew clean && cd ../",
+    "android:apk": "cd android/ && ./gradlew assembleRelease && ./gradlew --stop && cd ../",
+    "android:clean-apk": "npm run android:clean && npm run android:apk",
     "android:stop-gradle": "cd android/ && ./gradlew --stop && cd ../"
   },
   "dependencies": {
