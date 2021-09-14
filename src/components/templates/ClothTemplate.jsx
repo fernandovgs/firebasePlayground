@@ -10,6 +10,8 @@ import PropTypes from 'prop-types';
 
 import clothTemplateStyle from '../../styles/clothTemplateStyle';
 
+import t from '../../i18n';
+
 const ClothTemplate = ({ title, onPress }) => (
   <SafeAreaView style={clothTemplateStyle.mainContainer}>
     <ScrollView
@@ -24,13 +26,13 @@ const ClothTemplate = ({ title, onPress }) => (
 
       {/* Product Info */}
       <View style={clothTemplateStyle.productInfoContainer}>
-        <Text>FOTO</Text>
+        <Text>{t('PHOTO')}</Text>
       </View>
 
       {/* Buy button */}
       <TouchableOpacity style={clothTemplateStyle.buyButtonTouchable} onPress={onPress}>
         <View style={clothTemplateStyle.buyButtonContainer}>
-          <Text style={clothTemplateStyle.buyButtonTitle}>Comprar</Text>
+          <Text style={clothTemplateStyle.buyButtonTitle}>{t('BUY')}</Text>
         </View>
       </TouchableOpacity>
 

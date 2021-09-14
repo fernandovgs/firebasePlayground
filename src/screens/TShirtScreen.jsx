@@ -3,10 +3,11 @@ import React from 'react';
 import ClothTemplate from '../components/templates/ClothTemplate';
 
 import clothesAnalytics from '../analytics/clothesAnalytics';
+import t from '../i18n';
 
 const TShirtScreen = () => (
   <ClothTemplate
-    title="Camiseta"
+    title={t('T_SHIRT')}
     onPress={async () => {
       await clothesAnalytics({
         eventName: 'tshirt',

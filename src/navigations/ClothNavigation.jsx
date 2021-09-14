@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator, MaterialTopTabBar } from '@react-navigat
 import JacketScreen from '../screens/JacketScreen';
 import PantsScreen from '../screens/PantsScreen';
 import TShirtScreen from '../screens/TShirtScreen';
+import t from '../i18n';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -30,9 +31,9 @@ const ClothNavigation = () => (
       />
     )}
   >
-    <Tab.Screen name="Jaqueta" component={JacketScreen} />
-    <Tab.Screen name="Calça" component={PantsScreen} />
-    <Tab.Screen name="Camisa" component={TShirtScreen} />
+    <Tab.Screen name={t('JACKET')} component={JacketScreen} />
+    <Tab.Screen name={t('PANTS')} component={PantsScreen} />
+    <Tab.Screen name={t('T_SHIRT')} component={TShirtScreen} />
   </Tab.Navigator>
 );
 
