@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android:pt": "npm run locale:pt && npm run android",
+    "android:en": "npm run locale:en && npm run android",
     "ios": "react-native run-ios",
+    "ios:pt": "npm run locale:pt && react-native run-ios",
+    "ios:en": "npm run locale:en && react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "lint": "npx eslint --ext .jsx --ext .js . --fix",
