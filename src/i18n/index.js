@@ -1,20 +1,7 @@
-import { Platform, NativeModules } from 'react-native';
 import I18n from 'i18n-js';
 import en from './locales/en';
 import pt from './locales/pt';
-
-const normalizeTranslate = {
-  en_US: 'en_US',
-  pt_BR: 'pt_BR',
-  en: 'en_US',
-  pt_US: 'pt_BR',
-};
-
-const getLanguageDevice = () => (
-  Platform.OS === 'ios'
-    ? NativeModules.SettingsManager.settings.AppleLocale
-    : NativeModules.I18nManager.localeIdentifier
-);
+import CURRENT_LOCALE from './configLocales';
 
 I18n.translations = {
   en_US: en,
@@ -22,12 +9,10 @@ I18n.translations = {
 };
 
 const setLanguageToI18n = () => {
-  const language = getLanguageDevice();
+  const language = CURRENT_LOCALE;
 
-  const translateNormalize = normalizeTranslate[language];
-
-  const currentLocale = I18n.translations[translateNormalize]
-    ? translateNormalize
+  const currentLocale = I18n.translations[language]
+    ? language
     : 'en_US';
 
   I18n.defaultLocale = currentLocale;
