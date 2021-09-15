@@ -8,8 +8,12 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "npx eslint --ext .jsx --ext .js . --fix",
+    "locale:pt": "LOCALE=pt node setLocale.js",
+    "locale:en": "LOCALE=en node setLocale.js",
     "android:clean": "cd android/ && ./gradlew clean && cd ../",
     "android:apk": "cd android/ && ./gradlew assembleRelease && ./gradlew --stop && cd ../",
+    "android:pt-apk": "npm run locale:pt && cd android/ && ./gradlew assembleRelease && ./gradlew --stop && cd ../",
+    "android:en-apk": "npm run locale:en && cd android/ && ./gradlew assembleRelease && ./gradlew --stop && cd ../",
     "android:clean-apk": "npm run android:clean && npm run android:apk",
     "android:stop-gradle": "cd android/ && ./gradlew --stop && cd ../"
   },
