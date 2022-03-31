@@ -1,9 +1,11 @@
 import React from 'react';
 
 import { createMaterialTopTabNavigator, MaterialTopTabBar } from '@react-navigation/material-top-tabs';
+import SimplePage from 'firebase-playground-submodule';
 import JacketScreen from '../screens/JacketScreen';
 import PantsScreen from '../screens/PantsScreen';
 import TShirtScreen from '../screens/TShirtScreen';
+
 import useI18n from '../hooks/useI18n';
 
 const Tab = createMaterialTopTabNavigator();
@@ -37,6 +39,7 @@ const ClothNavigation = () => {
       <Tab.Screen name={i18n.JACKET} component={JacketScreen} />
       <Tab.Screen name={i18n.PANTS} component={PantsScreen} />
       <Tab.Screen name={i18n.T_SHIRT} component={TShirtScreen} />
+      <Tab.Screen name={i18n.SUBMODULE} component={SimplePage} />
     </Tab.Navigator>
   );
 };

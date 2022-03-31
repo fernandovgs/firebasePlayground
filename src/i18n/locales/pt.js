@@ -4,4 +4,5 @@ export default {
   T_SHIRT: 'Camisa',
   BUY: 'Comprar',
   PHOTO: 'FOTO',
+  SUBMODULE: 'Sub módulo',
 };

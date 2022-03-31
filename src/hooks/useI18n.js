@@ -8,6 +8,7 @@ const useI18n = () => {
     T_SHIRT: t('T_SHIRT'),
     BUY: t('BUY'),
     PHOTO: t('PHOTO'),
+    SUBMODULE: t('SUBMODULE'),
   });
 
   return i18n;

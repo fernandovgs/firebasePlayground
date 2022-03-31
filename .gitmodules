@@ -1,0 +1,3 @@
+[submodule "firebase-playground-submodule"]
+	path = firebase-playground-submodule
+	url = git@github.com:fernandovgs/firebase-playground-submodule.git
